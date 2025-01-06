@@ -8,4 +8,10 @@ jobs:
     steps: 
       - name: Testing Workflow
         run: echo "Workflow Works"
+      - name: code checkout
+        uses: actions/checkout@v4
+      - name: Test code
+        run: mvn test
+      - name: checkstyle
+        run: mvn checkstyle:checkstyle
 
